@@ -10,7 +10,13 @@ COPY package*.json ./
 
 ###  Installing dependencies
 
-RUN npm install --silent
+RUN yarn
+
+RUN npm run build
+
+RUN npm start
+
+RUN ls
 
 # copy local files to app folder
 COPY . .
